@@ -1,0 +1,153 @@
+/* style.css */
+body {
+    background-image: url('assets/Sprites/background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.score-container{
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    width: 50%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.score > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score img {
+    width: 50px;
+    height: 30px;
+}
+
+.score .team-name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.score .score-left,
+.score .score-right {
+    font-size: 2em;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer div {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.timer .time {
+    font-size: 3em;
+}
+
+.field {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.goal-left,
+.goal-right {
+    position: absolute;
+    top: 100px;
+    width: 50px;
+    height: 150px;
+}
+
+.goal-left {
+    left: 20px;
+}
+
+.goal-right {
+    right: 20px;
+}
+
+.net {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.player-left,
+.player-right,
+.ball {
+    position: absolute;
+}
+
+.player-left {
+    left: 50px;
+    bottom: 50px;
+}
+
+.player-right {
+    right: 50px;
+    bottom: 50px;
+}
+
+.ball {
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+}
+
+.player-left img,
+.player-right img,
+.ball img {
+    width: 50px;
+    height: 50px;
+}
+
+.player-name , .match-history{
+    font-size: 1.2em;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    border-radius: 10px;
+}

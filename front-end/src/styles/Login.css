@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container > .card {
+  background: rgb(196, 196, 196);
+  padding: 16px 12px;
+  border-radius: 12px;
+}
+
+.container > .card > .title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.container > .card > form > .form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.container > .card > form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container > .card > form > .form-control > .label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.container > .card > form > .form-control > .form-input {
+  width: 320px;
+  border: solid 1px rgb(173, 173, 173);
+  padding: 8px 4px;
+  border-radius: 8px;
+}
+
+.container > .card > form > .form-control > .showpassword {
+  cursor: pointer;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.container > .card > form > .form-control > .form-input:focus {
+  outline: none;
+}
+
+.container > .card > form > .btn {
+  border: solid 1px rgb(145, 145, 145);
+  border-radius: 8px;
+  padding: 8px 4px;
+  cursor: pointer;
+}
+
+.container > .card > form > .btn:hover {
+  background: rgb(145, 145, 145);
+}
