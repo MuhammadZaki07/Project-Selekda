@@ -12,9 +12,7 @@ function AdminDashboard() {
     comments: 0,
   });
 
-  // Simulate fetching dashboard data
   useEffect(() => {
-    // Fetch dashboard data and update the state
     setDashboardData({
       users: 120,
       posts: 340,

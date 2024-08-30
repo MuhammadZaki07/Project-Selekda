@@ -25,6 +25,7 @@ class CommentSeeder extends Seeder
                 'captcha' => $faker->word,
                 'created_at' => now(),
                 'updated_at' => now(),
+                'blog_id' => $faker->numberBetween(1, 10),
             ]);
         }
     }

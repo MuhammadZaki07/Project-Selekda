@@ -121,10 +121,9 @@ class UserController extends BaseController
         }
     }
 
-    public function logout()
-    {
-        auth()->user()->tokens()->delete();
 
+    public function logout(Request $request){
+        $request->user()->tokens()->delete();
         return response()->json([
             "message" => "Logged Out Succesfuly",
         ], Response::HTTP_OK);

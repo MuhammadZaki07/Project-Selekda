@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchBlogDetail } from '../services/api';
-import '../styles/App.css';
+import '../styles/BlogDetails.css';
 
 const BlogDetail = () => {
   const { id } = useParams();

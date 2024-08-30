@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/App.css'; 
+import '../styles/Modal.css'; 
 
 const PortfolioModal = ({ portfolio, onClose }) => (
   <div className="portfolio-modal">

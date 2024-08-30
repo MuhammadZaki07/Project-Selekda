@@ -1,153 +1,104 @@
 /* style.css */
 body {
-    background-image: url('assets/Sprites/background1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  background-color: #004080;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.container {
-    padding: 20px;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
+#welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
+input,
+select,
+button {
+  margin: 10px;
+  padding: 10px;
 }
 
-.game-board {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
-}
-.score-container{
-    display: flex;
-    justify-content: center;
+button:disabled {
+  background-color: #333;
 }
 
-.score {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    width: 50%;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+#game-screen {
+  display: none;
+  width: 1000px;
+  height: 600px;
+  background-color: #a3d4f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.score > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#game-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.score img {
-    width: 50px;
-    height: 30px;
+#game-board {
+  width: 100%;
+  height: 80%;
+  background: url("assets/background1.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
 }
 
-.score .team-name {
-    font-size: 1.2em;
-    margin-bottom: 5px;
+.player {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  background-size: cover;
 }
 
-.score .score-left,
-.score .score-right {
-    font-size: 2em;
+#player1 {
+  left: 10px;
+  background-image: url("assets/Idle_000.png"); /* Path to your Player 1 PNG file */
 }
 
-.timer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.timer div {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.timer .time {
-    font-size: 3em;
-}
-
-.field {
-    border-radius: 10px;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
-
-.goal-left,
-.goal-right {
-    position: absolute;
-    top: 100px;
-    width: 50px;
-    height: 150px;
-}
-
-.goal-left {
-    left: 20px;
-}
-
-.goal-right {
-    right: 20px;
-}
-
-.net {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.player-left,
-.player-right,
-.ball {
-    position: absolute;
-}
-
-.player-left {
-    left: 50px;
-    bottom: 50px;
-}
-
-.player-right {
-    right: 50px;
-    bottom: 50px;
+#player2 {
+  right: 10px;
+  background-image: url("assets/Idle_002.png"); /* Path to your Player 2 PNG file */
 }
 
 .ball {
-    left: 50%;
-    bottom: 100px;
-    transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-size: "assets/Ball 02.png";
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.player-left img,
-.player-right img,
-.ball img {
-    width: 50px;
-    height: 50px;
+#timer {
+  font-size: 24px;
 }
 
-.player-name , .match-history{
-    font-size: 1.2em;
-    background-color: aquamarine;
-    padding: 5px 10px;
-    border-radius: 10px;
+#score-display {
+  font-size: 24px;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: red;
 }

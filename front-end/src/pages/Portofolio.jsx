@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/App.css";
+import "../styles/Portofolio.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { fetchPortfolios } from "../services/api";

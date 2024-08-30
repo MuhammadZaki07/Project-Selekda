@@ -24,6 +24,7 @@ class BlogSeeder extends Seeder
                 'tags' => implode(', ', $faker->words(3)),
                 'created_at' => now(),
                 'updated_at' => now(),
+                'comment_id' => $faker->numberBetween(1, 10),
             ]);
         }
     }
