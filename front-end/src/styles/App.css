@@ -8,7 +8,6 @@ body {
   min-height: 98vh;
 }
 
-/* Header Styles */
 .header {
   background-color: #333;
   color: #fff;
@@ -40,7 +39,6 @@ body {
   border-radius: 5px;
 }
 
-/* Footer Styles */
 .footer {
   background-color: #333;
   color: #fff;
@@ -74,7 +72,6 @@ body {
   font-size: 0.9em;
 }
 
-/* Banner Styles */
 .banner {
   background-color: #f4f4f4;
   padding: 40px 20px;
@@ -87,7 +84,6 @@ body {
   color: #333;
 }
 
-/* Gallery Styles */
 .gallery {
   padding: 20px;
 }
@@ -115,7 +111,6 @@ body {
   max-height: 100%;
 }
 
-/* Blog List Styles */
 .blog-list {
   padding: 20px;
 }
@@ -134,7 +129,6 @@ body {
   border-radius: 5px;
 }
 
-/* Testimonials Section */
 .testimonials {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -188,9 +182,6 @@ body {
   margin-top: 5px;
 }
 
-/* Media Queries for Responsiveness */
-
-/* Tablet and small screen devices */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

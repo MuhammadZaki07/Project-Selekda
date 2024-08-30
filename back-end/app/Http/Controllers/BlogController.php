@@ -12,7 +12,10 @@ class BlogController extends BaseController
 
     public function index()
     {
-        return response()->json(Blog::all());
+        return response()->json([
+            'data' => Blog::all(),
+            'message' => 'success',
+        ],200);
     }
 
 

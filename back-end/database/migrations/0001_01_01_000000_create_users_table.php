@@ -20,6 +20,7 @@ return new class extends Migration
             $table->binary('profile_picture')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('password');
+            $table->enum('role', ['admin', 'user'])->default('user');
             $table->timestamps();
         });
 

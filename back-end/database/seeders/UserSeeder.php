@@ -21,6 +21,7 @@ class UserSeeder extends Seeder
                 'birthdate' => $faker->date(),
                 'phone_number' => $faker->phoneNumber,
                 'profile_picture' => $faker->imageUrl(640, 480, 'people', true, 'Faker'),
+                'role' => $faker->randomElement(['admin', 'user']),
             ]);
         }
     }

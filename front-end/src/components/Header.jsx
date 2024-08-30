@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">Logo Anda</Link>
+        <Link to="/">WebtechID</Link>
       </div>
       <nav className="nav">
         <ul>
@@ -15,16 +15,10 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blogs">Blog</Link>
           </li>
           <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/services">Services</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/portofolio">Portfolio</Link>
           </li>
         </ul>
       </nav>

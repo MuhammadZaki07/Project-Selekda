@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Routing\Controller as BaseController;
 
 class UserController extends BaseController
 {
@@ -51,16 +52,24 @@ class UserController extends BaseController
 
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            $token = $user->createToken('Personal Access Token')->plainTextToken;
+        $student = User::firstWhere("email", $request->email);
 
-            return response()->json(['token' => $token, 'user' => $user]);
+        if (!$student || !Hash::check($request->password, $student->password)) {
+            response()->json([
+                "message" => "Bad Credentials",
+            ], Response::HTTP_NOT_FOUND);
         }
 
-        return response()->json(['message' => 'Unauthorized'], 401);
+        $token = $student->createToken('sancum_token')->plainTextToken;
+        return response()->json([
+            "message" => "Login Succesfuly",
+            "token" => $token
+        ], Response::HTTP_OK);
     }
 
     public function getProfile()
@@ -110,5 +119,14 @@ class UserController extends BaseController
         } catch (\Exception $e) {
             return response()->json(['message' => $e->getMessage()], 500);
         }
+    }
+
+    public function logout()
+    {
+        auth()->user()->tokens()->delete();
+
+        return response()->json([
+            "message" => "Logged Out Succesfuly",
+        ], Response::HTTP_OK);
     }
 }
